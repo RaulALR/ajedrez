@@ -1,0 +1,12 @@
+<div id="tablero">{{eleccionMovimiento}}
+  <table>
+    <tr class="fila" *ngFor="let item of chessVector">
+      <td class="celda" (click)="eleccion(itemSub.x, itemSub.y, itemSub.pieza, itemSub.equipo)"
+       *ngFor="let itemSub of item"
+       [ngStyle]="{'background-color': itemSub.colorFondo, 'color': itemSub.letra, 'width': '62px', 'height':'62px', 'text-align': 'center'}">
+        {{itemSub.pieza}}
+      </td>
+    </tr>
+  </table>
+</div>
+HOLA
