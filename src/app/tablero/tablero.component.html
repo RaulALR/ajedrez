@@ -1,10 +1,10 @@
 <div id="tablero">{{eleccionMovimiento}}
   <table>
     <tr class="fila" *ngFor="let item of chessVector">
-      <td class="celda" (click)="eleccion(itemSub.x, itemSub.y, itemSub.pieza, itemSub.equipo)"
+      <td class="celda" (click)="eleccion(itemSub.x, itemSub.y, itemSub.pieza, itemSub.equipo, itemSub.primeraJugada)"
        *ngFor="let itemSub of item"
-       [ngStyle]="{'background-color': itemSub.colorFondo, 'color': itemSub.letra, 'width': '62px', 'height':'62px', 'text-align': 'center'}">
-        {{itemSub.pieza}}
+       [ngStyle]="{'background-color': itemSub.colorFondo, 'color': itemSub.equipo === 1 ? 'red': 'blue' , 'width': '62px', 'height':'62px', 'text-align': 'center'}">
+        {{itemSub.x}} {{itemSub.y}}
       </td>
     </tr>
   </table>
